@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uiBackground"
+    android:paddingHorizontal="@dimen/padding_horizontal"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/dice"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="-100dp"
+        android:alpha="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dice6" />
+
+    <ImageView
+        android:id="@+id/emptyDice"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty_dice" />
+
+    <TextView
+        android:id="@+id/rolledTitle"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:alpha="0"
+        android:text="Rolled: "
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice" />
+
+    <TextView
+        android:id="@+id/rolledNumber"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:text="6"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="@+id/rolledTitle"
+        app:layout_constraintStart_toEndOf="@+id/rolledTitle" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/rollButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/uiBackground2"
+        android:text="Roll"
+        android:textColor="@color/text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rolledTitle"
+        app:layout_constraintVertical_bias=".1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
