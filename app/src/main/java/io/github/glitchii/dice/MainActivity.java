@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         emptyDice = findViewById(R.id.emptyDice);
         dice = findViewById(R.id.dice);
 
-        findViewById(R.id.rollButton).setOnClickListener(v -> roll());
+        rollButton.setOnClickListener(v -> roll());
+        dice.setOnClickListener(v -> roll());
     }
 
     /**
